@@ -24,7 +24,6 @@ Support a text-based user interface
 Load and save task list to file
 The solution may also include other creative features at your discretion in case you wish to show some flair(but this will not affect the default evaluation -- see checklist).
 
-
 ### Schedule
 06/03/2020 \
 IP Information released \
