@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Java Individual Project
 
 ## IP Specification
@@ -45,3 +46,6 @@ Update of Checklist
 
 
 
+=======
+# javaip
+>>>>>>> 73ae1bdab050642d4fcadd3b38f3b8df14dc5b1c
