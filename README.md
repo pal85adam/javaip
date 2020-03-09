@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Java Individual Project
 
 ## IP Specification
@@ -43,9 +42,3 @@ Using Checklist
 03/04/2020
 Final Review
 Update of Checklist
-
-
-
-=======
-# javaip
->>>>>>> 73ae1bdab050642d4fcadd3b38f3b8df14dc5b1c
