@@ -17,7 +17,7 @@ FR5 - System should restore task list on app restart.
 
 ### Class Diagram
 
-```plantuml
+<!-- ```plantuml
 @startuml
 
     class Task {
@@ -58,6 +58,9 @@ UserTasks "1" *-- "1..*" Task
 
 @enduml
 ```
+ -->
+
+![Class diagram](https://github.com/pal85adam/javaip/blob/master/classdiagram.png?raw=true)
 
 ### The interface should look similar to the mockup below:
 
