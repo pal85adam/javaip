@@ -9,11 +9,11 @@ ToDoly is a command-line application for the user to track his own tasks. It eas
 
 ### Functional requirements
 
-FR1 - User can add a new task
-FR2 - User can update a task
-FR3 - User can delete a task
-FR4 - User can view task list sorted by project or date.
-FR5 - System should restore task list on app restart.
+FR1 - User can add a new task. \
+FR2 - User can update a task. \
+FR3 - User can delete a task. \
+FR4 - User can view task list sorted by project or date. \
+FR5 - System should restore task list on app restart. \
 
 ### Class Diagram
 
@@ -72,3 +72,4 @@ UserTasks "1" *-- "1..*" Task
 \>> (3) Edit Task (update, mark as done, remove) \
 \>> (4) Save and Quit \
 \>>
+
