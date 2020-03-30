@@ -1,6 +1,5 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+package javaip;
+
 import java.util.Date;
 import java.util.Scanner;
 
@@ -37,18 +36,23 @@ public class Main{
         System.out.println(tasks.toString());
     }
 
-    public void addTasks(){
+    public void processShowTaskList(){
+        System.out.println("Pick to show task list \n(1) sorted by date. \n(2) sorted by project.\n");
+        int input = readLineAsOption();
+        switch (input){
+            case 1: tasks.sortByDate(); break;
+            case 2: tasks.sortByProject(); break;
+            default: System.out.println("Invalid input!"); break;
+        }
+        getTaskList();
+    }
+
+    public void addTasks() {
         while(true){
             System.out.println("Write the task as following:\n Task name, DD/MM/YYYY, Project name\n");
             String input = this.userScanner.nextLine();
-            //System.out.println(input);
-            String[] parts = input.split(",");
-            String taskTitle = parts[0];
-            Date dueDate = isValidDate(parts[1].trim(), "dd/MM/YYYY");
-            String project = parts[2];
-            if(parts.length == 3 && dueDate != null){
-                tasks.addTask(taskTitle, dueDate, project);
-            }else{
+
+            if(!tasks.addTaskFromStringLine(input + ", Await")){
                 System.out.println("Invalid input!");
             }
 
@@ -58,7 +62,7 @@ public class Main{
         }
     }
 
-    public void updateTask(int index){
+    public void updateTask(int index) {
         System.out.println("Choose what to update:"
         +"(1) Task title.\n"
         +"(2) Due to date.\n"
@@ -69,7 +73,7 @@ public class Main{
         switch(input){
             case 1:  tasks.getTaskByIndex(index).setTitle(attrToUpdate); break;
             case 2:   
-            Date dueDate = isValidDate(attrToUpdate.trim(), "dd/MM/YYYY");
+            Date dueDate = tasks.isValidDate(attrToUpdate.trim());
             if(dueDate != null){
                 tasks.getTaskByIndex(index).setDueDate(dueDate);
             }
@@ -89,7 +93,7 @@ public class Main{
     }
 
     public void quitAndSave(){
-        
+        tasks.saveToFile();
     }
 
     public int readLineAsOption(){
@@ -98,7 +102,7 @@ public class Main{
         return input;
     }
 
-    public void processEdit(){
+    public void processEdit() {
         int input = 0;
         while(true){
             this.getTaskList();
@@ -116,7 +120,7 @@ public class Main{
         }
     }
 
-    public void editTask(String action){
+    public void editTask(String action) {
         System.out.println("Enter task title to "+action+": ");
         String input = this.userScanner.nextLine();
         int index = tasks.getTaskIndex(input.trim());
@@ -134,39 +138,16 @@ public class Main{
             }
         }
     }
-
-    public Date isValidDate(String dateToValidate, String dateFromat){
-        Date date = null;
-        if(dateToValidate == null){
-            return null;
-        }
     
-        SimpleDateFormat sdf = new SimpleDateFormat(dateFromat);
-        sdf.setLenient(false);
-    
-        try {
-    
-            //if not valid, it will throw ParseException
-            date = sdf.parse(dateToValidate);
-            System.out.println(date);
-    
-        } catch (ParseException e) {
-    
-            e.printStackTrace();
-            return null;
-        }
-    
-        return date;
-    }
-    
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Main obj = new Main();
+        obj.tasks.readFromFile();
         int input = 0;
         while(true){
             obj.getMainMenu();
             input = obj.readLineAsOption();
             switch(input){
-                case 1: obj.getTaskList(); break;
+                case 1: obj.processShowTaskList(); break;
                 case 2: obj.addTasks(); break;
                 case 3: obj.processEdit(); break;
                 case 4: obj.quitAndSave(); break;
