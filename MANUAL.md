@@ -30,7 +30,7 @@ By entering 2 the message menu will show up to allow use
 to enter new task.
 
 />> Write the task as following: /
- Task name, DD/MM/YYYY, Project name
+  Task name, DD/MM/YYYY, Project name
 
 User should write the full task info. in one line as following
 noting that (,) is important.
