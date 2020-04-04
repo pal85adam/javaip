@@ -22,8 +22,7 @@ public class UserTasks{
     }
 
     public boolean removeTask(Task task){
-        return //(index > 0 && index <= this.tasks.size()) ? 
-        this.tasks.remove(task); // : null;
+        return this.tasks.remove(task);
     }
 
     public void updateTask(int index, String title, Date dueDate, String project){
@@ -115,7 +114,6 @@ public class UserTasks{
             DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
             format.setLenient(false);
             date = format.parse(dateToValidate);
-            //System.out.println(new SimpleDateFormat("dd/MM/yyyy").format(date));
 
         } catch (ParseException e) {
 
