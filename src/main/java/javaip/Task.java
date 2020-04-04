@@ -1,3 +1,6 @@
+package javaip;
+
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Task {
@@ -46,6 +49,6 @@ public class Task {
     }    
 
     public String toString(){
-        return getTitle() + ", " + getDueDate() + ", " + getProject() + ", " + (getStatus()?"Done":"Await");
+        return getTitle() + ", " + new SimpleDateFormat("dd/MM/YYYY").format( getDueDate() )+ ", " + getProject() + ", " + (getStatus()?"Done":"Await");
     }
 }
