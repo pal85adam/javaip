@@ -2,13 +2,13 @@
 
 ## Main menu
 
-/>> Welcome to ToDoLy /
-/>> You have X tasks todo and Y tasks are done! /
-/>> Pick an option: /
-/>> (1) Show Task List (by date or project) /
-/>> (2) Add New Task /
-/>> (3) Edit Task (update, mark as done, remove) /
-/>> (4) Save and Quit
+>\>> Welcome to ToDoLy \
+\>> You have X tasks todo and Y tasks are done! \
+\>> Pick an option: \
+\>> (1) Show Task List (by date or project) \
+\>> (2) Add New Task \
+\>> (3) Edit Task (update, mark as done, remove) \
+\>> (4) Save and Quit
 
 
 ### Show Task List (by date or project)
@@ -16,9 +16,9 @@
 By entering 1 the following menu will show up to allow use
 to choose how to show task list.
 
-/>> 1/
-Pick to show task list /
-(1) sorted by date. /
+>\>> 1\
+Pick to show task list \
+(1) sorted by date. \
 (2) sorted by project. 
 
 Choose 1 to view task list sorted by date, 2 to view task
@@ -29,13 +29,13 @@ list sorted by project name.
 By entering 2 the message menu will show up to allow use
 to enter new task.
 
-/>> Write the task as following: /
-  Task name, DD/MM/YYYY, Project name
+>\>> Write the task as following: \
+    Task name, DD/MM/YYYY, Project name
 
 User should write the full task info. in one line as following
 noting that (,) is important.
 
-/>>Add a new task? (Y = Yes, Others No)
+>\>>Add a new task? (Y = Yes, Others No)
 
 The message above will show up after entering the new task
 asking the user if the user wishes to add another task.
@@ -47,9 +47,57 @@ User can enter (Y) for yes, and any other character for No
 By entering 3 the following menu will show up to allow use
 to choose what to do and Task list will be viewed.
 
-/>> Pick an option: /
-/>> (1) Update /
-/>> (2) Mark as done /
-/>> (3) Remove /
-/>> (4) Exit /
+>\>> Pick an option: \
+\>> (1) Update \
+\>> (2) Mark as done \
+\>> (3) Remove \
+\>> (4) Exit
 
+If the user choose (1) the following message will be viewed
+
+>\>> 1 \
+Enter task title to Update:
+
+User should enter a valid task title to update.
+After entering a task title the following message will be viewed
+
+>Choose what to update:\  
+(1) Task title.\
+(2) Due to date.\
+(3) Project name.
+
+User can enter the new value after this message:
+
+>Enter the new value!
+
+>hi there, 22/03/2019,  Greetings, Await \
+\>> Pick an option: \
+\>> (1) Update \
+\>> (2) Mark as done \
+\>> (3) Remove \
+\>> (4) Exit \
+
+To change the state of a task from the above menu enter
+(2) and the following msg will be viewed.
+
+>\>> 2\
+Enter task title to Done:
+
+User should provide a valid task name and the status will be
+changed to Done.
+
+>hi there, 22/03/2019,  Greetings, Await \
+\>> Pick an option: \
+\>> (1) Update \
+\>> (2) Mark as done \
+\>> (3) Remove \
+\>> (4) Exit \
+
+To delete a state from the above menu enter
+(3) and the following msg will be viewed.
+
+>\>> 3\
+Enter task title to Remove:
+
+User should provide a valid task name and the task will be
+deleted.
