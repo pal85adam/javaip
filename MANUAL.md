@@ -16,7 +16,7 @@
 By entering 1 the following menu will show up to allow use
 to choose how to show task list.
 
->> 1
+>> 1\
 Pick to show task list 
 (1) sorted by date. 
 (2) sorted by project.
@@ -29,13 +29,13 @@ list sorted by project name.
 By entering 2 the message menu will show up to allow use
 to enter new task.
 
->Write the task as following:
+>> Write the task as following:
  Task name, DD/MM/YYYY, Project name
 
 User should write the full task info. in one line as following
 noting that (,) is important.
 
->Add a new task? (Y = Yes, Others No)
+>> Add a new task? (Y = Yes, Others No)
 
 The message above will show up after entering the new task
 asking the user if the user wishes to add another task.
